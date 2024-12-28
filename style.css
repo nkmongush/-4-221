@@ -1,0 +1,536 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #211400;
+    /* Тёмно-коричневый фон */
+    color: #f0e6d2;
+    /* Светло-кремовый текст */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #3e2500;
+    /* Тёмно-оранжевый цвет хедера */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    margin-left: 10px;
+}
+
+#logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffcc80;
+    /* Светло-оранжевый цвет ссылок */
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #5a3600;
+    /* Тёмно-оранжевый цвет ссылок при наведении */
+}
+
+nav ul li a#current {
+    background-color: #5a3600;
+    /* Цвет для текущей страницы */
+}
+
+main {
+    padding: 20px;
+    background-color: #331d00;
+    /* Темный фон для основного содержимого */
+    color: white;
+    flex: 1;
+}
+
+main p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    /* Тёмно-серый футер */
+    color: #f0e6d2;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+footer div {
+    margin: 5px;
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #663300;
+    /* Цвет границы таблицы */
+    text-align: left;
+}
+
+th {
+    background-color: #472a00;
+    /* Цвет фона заголовков таблицы */
+    color: white;
+}
+
+/* Стили для списка */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #472a00;
+    /* Цвет фона для списка */
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:hover {
+    background-color: #5f3700;
+    /* Цвет фона при наведении на элементы списка */
+}
+
+.term {
+    font-weight: bold;
+    color: #ffcc80;
+    /* Цвет для термина */
+}
+
+/* Стили для словаря */
+#search-term {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #663300;
+    /* Цвет границы поиска */
+    border-radius: 5px;
+    background-color: #472a00;
+    /* Цвет фона для поля ввода */
+    color: white;
+}
+
+#search-button,
+#end-search-button {
+    background-color: #ffa500;
+    /* Цвет кнопок поиска */
+    color: white;
+}
+
+#search-button:hover,
+#end-search-button:hover {
+    background-color: #e68a00;
+    /* Цвет кнопок при наведении */
+}
+
+#end-search-button {
+    display: none;
+    /* Изначально скрытая кнопка для завершения поиска */
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+    background-color: #331d00;
+    /* Темный фон для модального окна */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #663300;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    color: white;
+    /* Цвет текста в модальном окне */
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: white;
+}
+
+/* Стили для галереи */
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+}
+
+.gallery-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-images img {
+    width: 100%;
+    height: auto;
+}
+
+/* Кнопки галереи */
+.gallery-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #472a00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+    background-color: #663300;
+    /* Цвет кнопки при наведении */
+}
+
+.gallery-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#prevButton {
+    left: 10px;
+    /* Кнопка "Назад" слева */
+    z-index: 2;
+}
+
+#nextButton {
+    right: 10px;
+    /* Кнопка "Вперёд" справа */
+    z-index: 1;
+}
+
+/* Стили для страницы героев */
+.heroes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.hero {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    background-color: #331d00;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    text-align: left;
+    padding: 0 5px;
+}
+
+/* Стили для формы авторизации */
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+#authModal .modal-content {
+    max-width: 400px;
+}
+
+#authModal label {
+    display: block;
+    margin-top: 10px;
+}
+
+#authModal input[type="text"],
+#authModal input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #663300;
+    border-radius: 4px;
+    background-color: #472a00;
+    color: white;
+}
+
+#authModal input[type="radio"] {
+    margin-right: 5px;
+}
+
+#authModal input[type="submit"] {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#authModal input[type="submit"]:hover {
+    background-color: #e68a00;
+    /* Цвет кнопки "Отправить" при наведении */
+}
+
+/* Стили для профиля */
+#profile-slide .profile-info {
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* Стили для табов */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 1px solid #472a00;
+    background-color: #472a00;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.tab-button:hover,
+.tab-button.active {
+    background-color: #663300;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #logo img {
+        height: 40px;
+    }
+
+    form {
+        width: 90%;
+        max-width: none;
+    }
+
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-button {
+        margin: 5px 0;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #search-term,
+    #search-button {
+        margin: 5px 0;
+    }
+
+    .gallery-slide {
+        width: 270px;
+    }
+
+    .gallery-images img {
+        width: 250px;
+        margin: 0 5px;
+    }
+
+    .heroes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        width: 80%;
+    }
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #ffa500;
+    /* Цвет кнопок */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e68a00;
+    /* Цвет кнопки при наведении */
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Стили для формы регистрации */
+.registration-form {
+    background-color: #331d00;
+    /* Темный фон для формы регистрации */
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    max-width: 400px;
+    margin: 0 auto;
+    /* Центрирование формы */
+}
+
+/* Стили для полей ввода в форме регистрации */
+.registration-form input[type="text"],
+.registration-form input[type="date"],
+.registration-form input[type="radio"],
+.registration-form select {
+    padding: 10px;
+    margin: 10px 0;
+    /* Отступы сверху и снизу */
+    border: 1px solid #663300;
+    /* Цвет границы полей */
+    border-radius: 5px;
+    background-color: #472a00;
+    /* Цвет фона */
+    color: white;
+    /* Цвет текста */
+    width: 100%;
+    /* Полная ширина */
+}
+
+/* Стили для ошибок в форме регистрации */
+.registration-form .error-message {
+    color: red;
+    font-size: 0.9em;
+    /* Размер текста для сообщений об ошибке */
+    margin-top: -5px;
+    /* Уменьшение отступа сверху */
+    margin-bottom: 10px;
+    /* Отступ снизу */
+}
+
+/* Стили для успешных сообщений в форме регистрации */
+.registration-form .custom-success {
+    color: #4caf50;
+    /* Зеленый цвет для успешных сообщений */
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Стили для полей с радио-кнопками */
+.registration-form input[type="radio"] {
+    margin-right: 5px;
+    /* Отступ справа от радио-кнопок */
+}
+
+/* Стили для кнопки отправки */
+.registration-form input[type="submit"] {
+    background-color: #ffa500;
+    /* Цвет кнопки отправки */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registration-form input[type="submit"]:hover {
+    background-color: #e68a00;
+    /* Цвет кнопки "Отправить" при наведении */
+}

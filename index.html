@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overwatch 2 - Официальный сайт фанатов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="img/your-logo.png" alt="Your Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="current">Главное</a></li>
+                <li><a href="heroes.html">Герои</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="test.html">Тест</a></li>
+                <li><a href="glossary.html">Словарь</a></li>
+                <li><a href="description.html">Описание</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Модальное окно авторизации -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Авторизация</h2>
+            <form id="authForm">
+                <div>
+                    <label for="loginInput">Логин (4-10 символов):</label>
+                    <input type="text" id="loginInput" required>
+                    <div class="error-message" id="loginError"></div>
+                </div>
+                <div>
+                    <label for="birthdateInput">Дата рождения:</label>
+                    <input type="date" id="birthdateInput" required>
+                    <div class="error-message" id="birthdateError"></div>
+                </div>
+                <div>
+                    <label>Пол:</label><br>
+                    <input type="radio" id="authGenderMale" name="authGender" value="мужской" checked> Мужской<br>
+                    <input type="radio" id="authGenderFemale" name="authGender" value="женский"> Женский<br>
+                </div>
+                <input type="submit" value="Войти">
+            </form>
+        </div>
+    </div>
+
+    <main id="content">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="overview">Обзор</button>
+            <button class="tab-button" data-tab="modes">Режимы игры</button>
+            <button class="tab-button" data-tab="heroes">Герои</button>
+            <button class="tab-button" data-tab="maps">Карты</button>
+        </div>
+        <div class="tab-content active" id="overview">
+            <h2>Добро пожаловать на Overwatch 2!</h2>
+            <p>Overwatch 2 - это динамичный шутер от первого лица с большим количеством героев, уникальными
+                способностями и разнообразными режимами игры. Наслаждайтесь захватывающим геймплеем и дружелюбной
+                атмосферой с друзьями!</p>
+            <img src="img/ow2_cover.jpg" alt="Overwatch 2">
+            <p>Здесь вы найдёте всё необходимое, чтобы узнать о мире Overwatch 2: от подробных описаний героев до
+                стратегий в различных режимах.</p>
+        </div>
+        <div class="tab-content" id="modes">
+            <h2>Режимы игры Overwatch 2</h2>
+            <p>Наслаждайтесь захватывающими режимами, каждый из которых требует определенной стратегии и умений.</p>
+            <ul>
+                <li><strong>Захват точек:</strong> Классический режим, где команды соревнуются в захвате и удержании
+                    контрольных точек.</li>
+                <li><strong>Сопровождение:</strong> Команды соревнуются в доставке груза по карте.</li>
+                <li><strong>Битва:</strong> Быстрый и динамичный режим с простыми правилами.</li>
+                <li><strong>Командные бои:</strong> Много новых режимов с уникальными правилами!</li>
+                <li><strong>Аркады:</strong> Множество разнообразных аркадных режимов, где вы можете испытать всё!</li>
+            </ul>
+        </div>
+        <div class="tab-content" id="heroes">
+            <h2>Герои Overwatch 2</h2>
+            <p>Узнайте о каждом герое и выберите себе нового фаворита!</p>
+            <p>Здесь представлена информация о 5 героях каждого класса (Танки, Урон, Поддержка).</p>
+            <ul>
+                <li><strong>Танки:</strong> Райнхардт, Орисса, Заря, Д.Ва, Уинстон</li>
+                <li><strong>Урон:</strong> Солдат-76, Трейсер, Жнец, Гэнцзи, Маккри</li>
+                <li><strong>Поддержка:</strong> Ангел, Лусио, Дзенъятта, Ана, Мойра</li>
+            </ul>
+        </div>
+        <div class="tab-content" id="maps">
+            <h2>Поля боя Overwatch 2</h2>
+            <p>Погрузитесь в атмосферу каждой карты с захватывающими сражениями.</p>
+            <ul>
+                <li><strong>Нью-Йорк:</strong> </li>
+                <li><strong>Рио-де-Жанейро:</strong> </li>
+                <li><strong>Лондон:</strong> </li>
+                <li><strong>Токио:</strong> </li>
+                <li><strong>Храм Анубиса:</strong> </li>
+            </ul>
+            <p>Список карт постоянно пополняется новыми локациями.</p>
+        </div>
+    </main>
+    <footer>
+        <div>Контакты: <a href="tel:+7945582409">Телефон</a> | <a href="#">Соц. сети</a></div>
+        <div>&copy; 2024 Overwatch 2</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

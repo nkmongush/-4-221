@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Overwatch 2 - Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="img/your-logo.png" alt="Your Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главное</a></li>
+                <li><a href="heroes.html">Герои</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="test.html" id="current">Тест</a></li>
+                <li><a href="glossary.html">Словарь</a></li>
+                <li><a href="description.html">Описание</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="content">
+        <h1>Тест по Overwatch 2</h1>
+        <form id="quiz">
+            <div>
+                <p>1. Какой герой использует импульсную винтовку?</p>
+                <input type="text" name="q1" id="q1-1"> <label for="q1-1"></label>
+            </div>
+            <div>
+                <p>2. Каковы основные способности Рейнхардта?</p>
+                <input type="text" name="q2" id="q2-2"> <label for="q2-2"></label>
+            </div>
+            <div>
+                <p>3. К какому типу героев относится Мерси?</p>
+                <label><input type="radio" name="q3" value="A"> A. Танк</label><br>
+                <label><input type="radio" name="q3" value="B"> B. Дамагер</label><br>
+                <label><input type="radio" name="q3" value="C"> C. Поддержка</label><br>
+                <label><input type="radio" name="q3" value="D"> D. Ни один из вышеперечисленных</label><br>
+            </div>
+            <div>
+                <p>4. В каком году вышла игра Owerwath 2?</p>
+                <label><input type="radio" name="q4" value="A"> A. 2016</label><br>
+                <label><input type="radio" name="q4" value="B"> B. 2015</label><br>
+                <label><input type="radio" name="q4" value="C"> C. 2017</label><br>
+                <label><input type="radio" name="q4" value="D"> D. 2013</label><br>
+            </div>
+            <div>
+                <p>5. Кто контр пик для Фарры?</p>
+                <label><input type="radio" name="q5" value="A"> A. Гендзи</label><br>
+                <label><input type="radio" name="q5" value="B"> B. Трейсер</label><br>
+                <label><input type="radio" name="q5" value="C"> C. эш</label><br>
+                <label><input type="radio" name="q5" value="D"> D. любые персонажы которые стреляют в даль</label><br>
+            </div>
+            <div>
+                <p>6. Как зовут нового танка?</p>
+                <label><input type="radio" name="q6" value="A"> A. Дуумфист</label><br>
+                <label><input type="radio" name="q6" value="B"> B. азарт</label><br>
+                <label><input type="radio" name="q6" value="C"> C. Раматтра</label><br>
+                <label><input type="radio" name="q6" value="D"> D. Мауга</label><br>
+            </div>
+            <button id="checkTestButton">Проверить</button>
+            <button id="resetTestButton">Начать заново</button>
+            </div>
+            <div id="results"></div>
+    </main>
+    <footer>
+        <div>Контакты: <a href="tel:+7945582409">Телефон</a> | <a href="#">Соц. сети</a></div>
+        <div>&copy; 2024 [Начын.М]</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
